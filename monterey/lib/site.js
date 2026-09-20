@@ -29,6 +29,43 @@ export const site = {
       { label: "View Live Performance", href: "#performance", width: 228 },
     ],
   },
+  cta: {
+    headline: ["Your Capital with Quantitative", "Shariah Discipline"],
+    button: { label: "Explore Research Repositories", href: "#research" },
+  },
+  footer: {
+    description:
+      "Monterey Finance is a Shariah-compliant quantitative research lab and asset management initiative. We sit at the intersection of systematic quantitative finance, machine learning engineering, and authentic Islamic jurisprudence (Fiqh al-Mu’amalat).",
+    wordmark: {
+      src: "/full-logo.png",
+      alt: "Monterey Finance",
+      width: 530,
+      height: 63,
+    },
+    watermark: {
+      src: "/glass-logo.jpg",
+      alt: "",
+      width: 753,
+      height: 373,
+    },
+    navigation: {
+      label: "Navigation",
+      links: [
+        { label: "Home", href: "#top" },
+        { label: "Mission", href: "#about" },
+        { label: "Research", href: "#research" },
+        { label: "About", href: "#principles" },
+      ],
+    },
+    contact: {
+      label: "Contact",
+      links: [
+        { label: "Instagram", href: "#" },
+        { label: "Twitter", href: "#" },
+        { label: "Email", href: "#" },
+      ],
+    },
+  },
 };
 
 export const liveFund = {

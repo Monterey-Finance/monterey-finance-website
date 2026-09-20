@@ -1,11 +1,11 @@
-import Image from "next/image";
 import CorePrinciples from "@/components/CorePrinciples";
+import CtaBanner from "@/components/CtaBanner";
 import FirstPrinciples from "@/components/FirstPrinciples";
 import Hero from "@/components/Hero";
 import LiveFundPerformance from "@/components/LiveFundPerformance";
 import ModelsMethodology from "@/components/ModelsMethodology";
 import ResearchLab from "@/components/ResearchLab";
-import { site } from "@/lib/site";
+import SiteFooter from "@/components/SiteFooter";
 
 export default function Home() {
   return (
@@ -27,21 +27,8 @@ export default function Home() {
           </section>
         </main>
 
-        <footer className="mt-auto border-t border-white/10">
-          <div className="mx-auto flex w-full max-w-[1704px] flex-col gap-6 px-6 py-12 md:flex-row md:items-start md:justify-between md:px-10">
-            <div className="max-w-xl">
-              <Image
-                src={site.logo.src}
-                alt={site.logo.alt}
-                width={site.logo.width}
-                height={site.logo.height}
-                className="h-10 w-auto"
-              />
-              <p className="mt-4 text-sm leading-[1.48] text-white/80">{site.shortDescription}</p>
-            </div>
-            <p className="text-sm text-muted">© {new Date().getFullYear()} {site.name}</p>
-          </div>
-        </footer>
+        <CtaBanner />
+        <SiteFooter />
       </div>
     </div>
   );
