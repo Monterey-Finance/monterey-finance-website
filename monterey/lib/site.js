@@ -31,6 +31,37 @@ export const site = {
   },
 };
 
+export const liveFund = {
+  title: "Live Fund Performance",
+  intro:
+    "We believe in full transparency. Below is the real-time performance of our quantitative Shariah-compliant fund strategies compared against global market benchmarks.",
+};
+
+export const researchLab = {
+  title: "Open Research Lab",
+  intro:
+    "Monterey Finance operates as a quantitative fund and an open research lab. We do not use proprietary black boxes. We test our strategies on historical data and publish our findings as open-access papers.",
+  papers: [
+    {
+      title: "Dual-Momentum Regime Switching under Halal Screens",
+      subtitle:
+        "An Exploratory Backtest of 12–1 Relative Strength and a 200-Day SMA Overlay, 2019–2024",
+      rotate: "-1.79deg",
+    },
+    {
+      title: "High-Beta Acceleration in Low-Debt Tech",
+      subtitle:
+        "An Exploratory Backtest of Upside Participation versus Downside Capture under AAOIFI Screens, 2020–2025",
+      rotate: "-0.75deg",
+    },
+    {
+      title: "Post-Earnings Announcement Drift under AAOIFI Screens",
+      subtitle: "An Exploratory Backtest of Halal Earnings Surprise, 2020–2025",
+      rotate: "1.79deg",
+    },
+  ],
+};
+
 export const firstPrinciples = {
   title: "Built from First Principles",
   intro:

@@ -52,8 +52,19 @@ body {
   zoom: min(1, calc(100vw / 1920px));
 }
 
+.below-hero {
+  zoom: 0.9;
+  width: 1920px;
+  margin-inline: auto;
+}
+
 @media (max-width: 767px) {
   .figma-frame {
+    width: 100%;
+    zoom: 1;
+  }
+
+  .below-hero {
     width: 100%;
     zoom: 1;
   }
