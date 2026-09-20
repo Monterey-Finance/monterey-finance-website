@@ -1,69 +1,68 @@
 import Image from "next/image";
+import FirstPrinciples from "@/components/FirstPrinciples";
+import Hero from "@/components/Hero";
+import { phases, site } from "@/lib/site";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.js
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="figma-frame flex min-h-full flex-1 flex-col bg-background text-foreground">
+      <Hero />
+      <FirstPrinciples />
+
+      <main className="flex-1">
+        <section id="research" className="mx-auto w-full max-w-[1297px] scroll-mt-24 px-6 py-16 md:px-10">
+          <h2 className="font-display text-3xl md:text-[40px]">Project Phases</h2>
+          <div className="mt-10 grid gap-10 md:grid-cols-2">
+            {phases.map((phase) => (
+              <article key={phase.id} className="rounded-[11px] bg-card p-8">
+                <h3 className="text-xl font-medium">{phase.name}</h3>
+                {phase.body.map((paragraph) => (
+                  <p key={paragraph.slice(0, 40)} className="mt-4 leading-[1.32] text-white/85">
+                    {paragraph}
+                  </p>
+                ))}
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="universe" className="mx-auto w-full max-w-[1297px] scroll-mt-24 px-6 py-16 md:px-10">
+          <h2 className="font-display text-3xl md:text-[40px]">Universe</h2>
+          <p className="mt-4 max-w-3xl leading-[1.32] text-white/85">
+            Phase 1 defines a documented Sharia-compliant stock universe with compliance rules applied before any strategy is tested.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        </section>
+
+        <section id="strategies" className="mx-auto w-full max-w-[1297px] scroll-mt-24 px-6 py-16 md:px-10">
+          <h2 className="font-display text-3xl md:text-[40px]">Strategies</h2>
+          <p className="mt-4 max-w-3xl leading-[1.32] text-white/85">
+            Strategies are specified with clear entry, exit, and risk rules, then backtested on historical market data with standard performance metrics.
+          </p>
+        </section>
+
+        <section id="performance" className="mx-auto w-full max-w-[1297px] scroll-mt-24 px-6 py-16 md:px-10">
+          <h2 className="font-display text-3xl md:text-[40px]">Live Fund</h2>
+          <p className="mt-4 max-w-3xl leading-[1.32] text-white/85">
+            Live capital is out of scope in Phase 1. Performance reporting will be added only after research produces acceptable and repeatable results.
+          </p>
+        </section>
       </main>
+
+      <footer className="mt-auto border-t border-white/10">
+        <div className="mx-auto flex w-full max-w-[1704px] flex-col gap-6 px-6 py-12 md:flex-row md:items-start md:justify-between md:px-10">
+          <div className="max-w-xl">
+            <Image
+              src={site.logo.src}
+              alt={site.logo.alt}
+              width={site.logo.width}
+              height={site.logo.height}
+              className="h-10 w-auto"
+            />
+            <p className="mt-4 text-sm leading-[1.48] text-white/80">{site.shortDescription}</p>
+          </div>
+          <p className="text-sm text-muted">© {new Date().getFullYear()} {site.name}</p>
+        </div>
+      </footer>
     </div>
   );
 }

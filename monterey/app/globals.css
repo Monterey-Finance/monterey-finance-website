@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-cyan: #00c8ff;
+  --color-indigo: #1d13b6;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-page: #000000;
+  --bg-card: #111111;
+  --color-muted: #949494;
+  --color-live: #00cf6e;
+  --glass-fill: rgba(247, 247, 247, 0.16);
+  --nav-pill: linear-gradient(
+    180deg,
+    rgba(74, 74, 74, 0.68) 0%,
+    #191919 95.673%
+  );
+  --tracking-display: -0.01em;
+  --tracking-sans: -0.05em;
+  --background: var(--color-page);
+  --foreground: var(--color-white);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-cyan: #00c8ff;
+  --color-indigo: #1d13b6;
+  --color-card: var(--bg-card);
+  --color-muted: #949494;
+  --color-live: #00cf6e;
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: Advercase, var(--font-advercase), serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  letter-spacing: var(--tracking-sans);
+  overflow-x: hidden;
+}
+
+.figma-frame {
+  width: 1920px;
+  margin-inline: auto;
+  zoom: min(1, calc(100vw / 1920px));
+}
+
+@media (max-width: 767px) {
+  .figma-frame {
+    width: 100%;
+    zoom: 1;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  letter-spacing: var(--tracking-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: var(--tracking-display);
+}
+
+.nav-pill {
+  background: var(--nav-pill);
+}
+
+.btn-glass {
+  background: var(--glass-fill);
+  border-radius: 9px;
+  line-height: 1.185;
+  backdrop-filter: blur(18px) saturate(1.4);
 }
