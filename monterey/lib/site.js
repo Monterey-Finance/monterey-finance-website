@@ -62,6 +62,40 @@ export const researchLab = {
   ],
 };
 
+export const modelsMethodology = {
+  title: "Models & Methodology",
+  intro:
+    "Explore how our investment models select assets, manage risk, and maintain Shariah compliance at every trade.",
+  cards: [
+    {
+      title: "Point-in-Time Shariah Ingestion",
+      body: "Our automated screener ingests daily balance sheet data. It applies AAOIFI debt and liquidity ratio thresholds without historical lookahead or survivorship bias.",
+    },
+    {
+      title: "Multi-Factor Allocation Engine",
+      body: "Our models rank assets using four primary factors: Value, Momentum, Quality, and Low Volatility.",
+    },
+    {
+      title: "Sector Risk Rebalancing",
+      body: "Excluding conventional banks and high-debt firms creates heavy tech sector concentration. Our risk algorithms rebalance factor weights to reduce systemic volatility.",
+    },
+    {
+      title: "Programmatic Purification",
+      body: "Non-compliant business revenue (<5%) is calculated down to the specific payout date. Cleansing schedules are fully automated for tax and reporting efficiency.",
+    },
+  ],
+};
+
+export const corePrinciples = {
+  title: "Our Core Principles",
+  items: [
+    "Radical Transparency: Every computation, risk metric, and performance record is open for review.",
+    "Uncompromising Integrity: Shariah compliance is an absolute constraint, never a secondary feature.",
+    "Scientific Rigor: We rely on empirical data and peer-reviewed methods, not market stories.",
+    "Value Compounding: We protect purchasing power and compound investor wealth over long time horizons.",
+  ],
+};
+
 export const firstPrinciples = {
   title: "Built from First Principles",
   intro:

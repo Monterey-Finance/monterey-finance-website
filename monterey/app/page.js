@@ -1,7 +1,9 @@
 import Image from "next/image";
+import CorePrinciples from "@/components/CorePrinciples";
 import FirstPrinciples from "@/components/FirstPrinciples";
 import Hero from "@/components/Hero";
 import LiveFundPerformance from "@/components/LiveFundPerformance";
+import ModelsMethodology from "@/components/ModelsMethodology";
 import ResearchLab from "@/components/ResearchLab";
 import { site } from "@/lib/site";
 
@@ -13,19 +15,14 @@ export default function Home() {
         <FirstPrinciples />
         <LiveFundPerformance />
         <ResearchLab />
+        <ModelsMethodology />
+        <CorePrinciples />
 
         <main className="flex-1">
           <section id="universe" className="mx-auto w-full max-w-[1297px] scroll-mt-24 px-6 py-16 md:px-10">
             <h2 className="font-display text-3xl md:text-[40px]">Universe</h2>
             <p className="mt-4 max-w-3xl leading-[1.32] text-white/85">
               Phase 1 defines a documented Sharia-compliant stock universe with compliance rules applied before any strategy is tested.
-            </p>
-          </section>
-
-          <section id="strategies" className="mx-auto w-full max-w-[1297px] scroll-mt-24 px-6 py-16 md:px-10">
-            <h2 className="font-display text-3xl md:text-[40px]">Strategies</h2>
-            <p className="mt-4 max-w-3xl leading-[1.32] text-white/85">
-              Strategies are specified with clear entry, exit, and risk rules, then backtested on historical market data with standard performance metrics.
             </p>
           </section>
         </main>
