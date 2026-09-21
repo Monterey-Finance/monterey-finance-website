@@ -21,8 +21,8 @@ export default function Home() {
 
         <main className="flex-1">
           <section id="universe" className="mx-auto w-full max-w-[1297px] scroll-mt-24 px-6 py-16 md:px-10">
-            <h2 className="font-display text-3xl md:text-[40px]">Universe</h2>
-            <Reveal className="mt-4 max-w-3xl leading-[1.32] text-white/85">
+            <h2 className="font-display text-[26px] md:text-[40px]">Universe</h2>
+            <Reveal className="mt-3 max-w-3xl text-[14px] leading-[1.4] text-white/85 md:mt-4 md:text-base md:leading-[1.32]">
               Phase 1 defines a documented Sharia-compliant stock universe with compliance rules applied before any strategy is tested.
             </Reveal>
           </section>

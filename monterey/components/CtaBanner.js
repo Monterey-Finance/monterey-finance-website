@@ -15,17 +15,17 @@ export default function CtaBanner() {
         />
 
         <div className="relative z-10 flex flex-col items-center px-6 py-16 text-center md:px-0 md:pt-[146px] md:pb-0">
-          <h2 className="font-display max-w-[1081px] text-[32px] leading-normal tracking-[-0.01em] text-white md:text-[83px]">
+          <h2 className="font-display max-w-[1081px] text-[26px] leading-tight tracking-[-0.01em] text-white md:text-[83px] md:leading-normal">
             {site.cta.headline.map((line) => (
               <span key={line} className="block">
                 {line}
               </span>
             ))}
           </h2>
-          <Reveal className="mt-8 md:mt-[35px]">
+          <Reveal className="mt-6 md:mt-[35px]">
             <a
               href={site.cta.button.href}
-              className="btn-glass inline-flex h-12 items-center justify-center px-5 text-[16px] tracking-[-0.05em] text-white md:h-[65px] md:w-[390px] md:text-[27px]"
+              className="btn-glass inline-flex h-10 w-full max-w-[260px] items-center justify-center px-4 text-[13px] tracking-[-0.05em] text-white md:h-[65px] md:w-[390px] md:max-w-none md:px-5 md:text-[27px]"
             >
               {site.cta.button.label}
             </a>
