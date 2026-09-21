@@ -62,7 +62,7 @@ export default function SiteFooter() {
         alt=""
         width={footer.watermark.width}
         height={footer.watermark.height}
-        className="pointer-events-none absolute left-1/2 top-[160px] w-[min(90vw,753px)] max-w-none -translate-x-1/2 select-none md:top-[300px] md:h-[373px] md:w-[753px]"
+        className="pointer-events-none absolute left-1/2 top-[160px] w-[min(90vw,753px)] max-w-none -translate-x-1/2 select-none md:top-[370px] md:h-[373px] md:w-[753px]"
         style={{ filter: "url(#logo-knockout-white) brightness(1.85)" }}
       />
     </footer>
