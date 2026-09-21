@@ -29,10 +29,6 @@ export const metadata = {
     "factor investing",
     "backtesting",
   ],
-  icons: {
-    icon: site.logo.src,
-    apple: site.logo.src,
-  },
   openGraph: {
     title: site.title,
     description: site.shortDescription,
