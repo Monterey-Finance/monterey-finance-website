@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "@/components/Reveal";
 import { researchLab } from "@/lib/site";
 
 export default function ResearchLab() {
@@ -13,7 +14,7 @@ export default function ResearchLab() {
         </p>
       </div>
 
-      <div className="mx-auto mt-14 grid max-w-[1616px] grid-cols-1 gap-y-16 md:mx-0 md:mt-[149px] md:grid-cols-3 md:gap-x-[80px]">
+      <Reveal className="mx-auto mt-14 grid max-w-[1616px] grid-cols-1 gap-y-16 md:mx-0 md:mt-[149px] md:grid-cols-3 md:gap-x-[80px]">
         {researchLab.papers.map((paper) => (
           <article key={paper.title} className="flex flex-col items-center text-center">
             <div
@@ -36,7 +37,7 @@ export default function ResearchLab() {
             </p>
           </article>
         ))}
-      </div>
+      </Reveal>
     </section>
   );
 }

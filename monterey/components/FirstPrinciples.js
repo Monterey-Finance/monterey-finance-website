@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "@/components/Reveal";
 import { firstPrinciples } from "@/lib/site";
 
 export default function FirstPrinciples() {
@@ -15,7 +16,7 @@ export default function FirstPrinciples() {
           {firstPrinciples.intro}
         </p>
 
-        <div className="mt-14 grid grid-cols-1 gap-y-16 md:mt-[146px] md:grid-cols-3 md:gap-x-[151px]">
+        <Reveal className="mt-14 grid grid-cols-1 gap-y-16 md:mt-[146px] md:grid-cols-3 md:gap-x-[151px]">
           {firstPrinciples.columns.map((column) => (
             <div key={column.title} className="flex flex-col items-center text-center">
               <p
@@ -39,7 +40,7 @@ export default function FirstPrinciples() {
               </div>
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -36,6 +36,15 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 body {
@@ -44,6 +53,20 @@ body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   letter-spacing: var(--tracking-sans);
   overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .figma-frame {
@@ -70,13 +93,6 @@ body {
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
-  letter-spacing: var(--tracking-sans);
-}
-
 .font-display {
   font-family: var(--font-display);
   letter-spacing: var(--tracking-display);
@@ -86,9 +102,44 @@ body {
   background: var(--nav-pill);
 }
 
+.btn-glass,
+.nav-pill {
+  box-shadow: none;
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+}
+
+.btn-glass:hover,
+.nav-pill:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.42);
+}
+
 .btn-glass {
   background: var(--glass-fill);
   border-radius: 9px;
   line-height: 1.185;
   backdrop-filter: blur(18px) saturate(1.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .btn-glass,
+  .nav-pill,
+  .btn-glass:hover,
+  .nav-pill:hover {
+    transform: none;
+    transition: none;
+  }
 }

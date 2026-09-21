@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import LiveFundPerformance from "@/components/LiveFundPerformance";
 import ModelsMethodology from "@/components/ModelsMethodology";
 import ResearchLab from "@/components/ResearchLab";
+import Reveal from "@/components/Reveal";
 import SiteFooter from "@/components/SiteFooter";
 
 export default function Home() {
@@ -21,9 +22,9 @@ export default function Home() {
         <main className="flex-1">
           <section id="universe" className="mx-auto w-full max-w-[1297px] scroll-mt-24 px-6 py-16 md:px-10">
             <h2 className="font-display text-3xl md:text-[40px]">Universe</h2>
-            <p className="mt-4 max-w-3xl leading-[1.32] text-white/85">
+            <Reveal className="mt-4 max-w-3xl leading-[1.32] text-white/85">
               Phase 1 defines a documented Sharia-compliant stock universe with compliance rules applied before any strategy is tested.
-            </p>
+            </Reveal>
           </section>
         </main>
 

@@ -1,3 +1,4 @@
+import Reveal from "@/components/Reveal";
 import { modelsMethodology } from "@/lib/site";
 
 export default function ModelsMethodology() {
@@ -12,7 +13,7 @@ export default function ModelsMethodology() {
         </p>
       </div>
 
-      <div className="mx-auto mt-10 grid max-w-[1590px] grid-cols-1 gap-6 sm:grid-cols-2 md:mx-0 md:mt-[62px] md:grid-cols-4 md:gap-[42px]">
+      <Reveal className="mx-auto mt-10 grid max-w-[1590px] grid-cols-1 gap-6 sm:grid-cols-2 md:mx-0 md:mt-[62px] md:grid-cols-4 md:gap-[42px]">
         {modelsMethodology.cards.map((card) => (
           <article
             key={card.title}
@@ -28,7 +29,7 @@ export default function ModelsMethodology() {
             </div>
           </article>
         ))}
-      </div>
+      </Reveal>
     </section>
   );
 }

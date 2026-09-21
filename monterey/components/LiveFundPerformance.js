@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "@/components/Reveal";
 import { liveFund } from "@/lib/site";
 
 export default function LiveFundPerformance() {
@@ -13,7 +14,7 @@ export default function LiveFundPerformance() {
         </p>
       </div>
 
-      <div className="relative mx-auto mt-12 h-[240px] w-full max-w-[1656px] overflow-hidden rounded-[16px] sm:h-[420px] md:mt-[76px] md:h-[932px] md:rounded-[24px] md:-ml-[35px] md:w-[1656px] md:max-w-none">
+      <Reveal className="relative mx-auto mt-12 h-[240px] w-full max-w-[1656px] overflow-hidden rounded-[16px] sm:h-[420px] md:mt-[76px] md:h-[932px] md:rounded-[24px] md:-ml-[35px] md:w-[1656px] md:max-w-none">
         <Image
           src="/fund-performance.png"
           alt="Live Monterey Finance fund performance in a browser window"
@@ -21,7 +22,7 @@ export default function LiveFundPerformance() {
           sizes="1656px"
           className="object-cover object-top"
         />
-      </div>
+      </Reveal>
     </section>
   );
 }

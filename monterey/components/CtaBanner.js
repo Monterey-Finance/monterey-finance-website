@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "@/components/Reveal";
 import { site } from "@/lib/site";
 
 export default function CtaBanner() {
@@ -21,12 +22,14 @@ export default function CtaBanner() {
               </span>
             ))}
           </h2>
-          <a
-            href={site.cta.button.href}
-            className="btn-glass mt-8 inline-flex h-12 items-center justify-center px-5 text-[16px] tracking-[-0.05em] text-white shadow-[0px_4px_11.8px_0px_rgba(0,0,0,0.19)] md:mt-[35px] md:h-[65px] md:w-[390px] md:text-[27px]"
-          >
-            {site.cta.button.label}
-          </a>
+          <Reveal className="mt-8 md:mt-[35px]">
+            <a
+              href={site.cta.button.href}
+              className="btn-glass inline-flex h-12 items-center justify-center px-5 text-[16px] tracking-[-0.05em] text-white md:h-[65px] md:w-[390px] md:text-[27px]"
+            >
+              {site.cta.button.label}
+            </a>
+          </Reveal>
         </div>
       </div>
     </section>
