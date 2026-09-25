@@ -11,6 +11,13 @@ export const site = {
     width: 111,
     height: 58,
   },
+  embed: {
+    src: "/Main Embed.jpg",
+    alt: "Monterey Finance — Open Source Quantitative Hedge Fund",
+    width: 780,
+    height: 388,
+    type: "image/jpeg",
+  },
   nav: [
     { label: "Research", href: "#research" },
     { label: "Universe", href: "#universe" },

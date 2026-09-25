@@ -35,11 +35,21 @@ export const metadata = {
     siteName: site.name,
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: site.embed.src,
+        alt: site.embed.alt,
+        width: site.embed.width,
+        height: site.embed.height,
+        type: site.embed.type,
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: site.title,
     description: site.shortDescription,
+    images: [site.embed.src],
   },
 };
 
