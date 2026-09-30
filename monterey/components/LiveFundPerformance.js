@@ -16,7 +16,7 @@ export default function LiveFundPerformance() {
 
       <Reveal className="relative mx-auto mt-8 h-[180px] w-full max-w-[1656px] overflow-hidden rounded-[14px] sm:h-[320px] md:mt-[76px] md:h-[932px] md:rounded-[24px] md:-ml-[35px] md:w-[1656px] md:max-w-none">
         <Image
-          src="/fund-performance.png"
+          src="/fund-performance.jpg"
           alt="Live Monterey Finance fund performance in a browser window"
           fill
           sizes="1656px"
