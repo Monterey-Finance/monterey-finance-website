@@ -1,3 +1,5 @@
+import { papers, RESEARCH_REPO } from "./research";
+
 export const site = {
   name: "Monterey Finance",
   title: "Monterey Finance",
@@ -19,26 +21,26 @@ export const site = {
     type: "image/jpeg",
   },
   nav: [
-    { label: "Research", href: "#research" },
-    { label: "Universe", href: "#universe" },
-    { label: "Strategies", href: "#strategies" },
-    { label: "About", href: "#about" },
+    { label: "Research", href: "/research" },
+    { label: "Universe", href: "/#universe" },
+    { label: "Strategies", href: "/#strategies" },
+    { label: "About", href: "/#about" },
   ],
   actions: [
-    { label: "Live Fund", href: "#performance", live: true },
-    { label: "Github", href: "#", arrow: true },
+    { label: "Live Fund", href: "/#performance", live: true },
+    { label: "Github", href: RESEARCH_REPO, arrow: true },
   ],
   hero: {
     headline: ["Quantitative Precision.", "Shariah Integrity."],
     lede: "Monterey Finance merges data-driven factor models with rigorous Shariah screening to compound wealth without compromise.",
     buttons: [
-      { label: "Read Our Research Papers", href: "#research", width: 262 },
+      { label: "Read Our Research Papers", href: "/research", width: 262 },
       { label: "View Live Performance", href: "#performance", width: 228 },
     ],
   },
   cta: {
     headline: ["Your Capital with Quantitative", "Shariah Discipline"],
-    button: { label: "Explore Research Repositories", href: "#research" },
+    button: { label: "Explore Research Repositories", href: "/research" },
   },
   footer: {
     description:
@@ -58,10 +60,10 @@ export const site = {
     navigation: {
       label: "Navigation",
       links: [
-        { label: "Home", href: "#top" },
-        { label: "Mission", href: "#about" },
-        { label: "Research", href: "#research" },
-        { label: "About", href: "#principles" },
+        { label: "Home", href: "/" },
+        { label: "Mission", href: "/#about" },
+        { label: "Research", href: "/research" },
+        { label: "About", href: "/#principles" },
       ],
     },
     contact: {
@@ -85,45 +87,14 @@ export const researchLab = {
   title: "Open Research Lab",
   intro:
     "Monterey Finance operates as a quantitative fund and an open research lab. We do not use proprietary black boxes. We test our strategies on historical data and publish our findings as open-access papers.",
-  papers: [
-    {
-      title: "Cash Generation under AAOIFI Debt Limits",
-      subtitle: "An Exploratory Backtest of Halal FCF Quality, 2023–2024",
-      image: "/papers/fcf-quality.png",
-      href: "https://github.com/regional-specter/Monterey-Finance/blob/main/Research/papers/01-fcf-ev/Cash%20Generation%20under%20AAOIFI%20Debt%20Limits.pdf",
-      rotate: "-1.79deg",
-    },
-    {
-      title: "High-ROIC Compounding under AAOIFI Debt Limits",
-      subtitle: "An Exploratory Backtest of Halal ROIC Reinvestment, 2022–2024",
-      image: "/papers/roic.png",
-      href: "https://github.com/regional-specter/Monterey-Finance/blob/main/Research/papers/02-roic-engine/High-ROIC%20Compounding%20under%20AAOIFI%20Debt%20Limits.pdf",
-      rotate: "-0.75deg",
-    },
-    {
-      title: "Dual-Momentum Regime Switching under Halal Screens",
-      subtitle:
-        "An Exploratory Backtest of 12–1 Relative Strength and a 200-Day SMA Overlay, 2019–2024",
-      image: "/papers/dual-momentum.png",
-      href: "https://github.com/regional-specter/Monterey-Finance/blob/main/Research/papers/04-dual-momentum-reg-switch/Dual-Momentum%20Regime%20Switching%20under%20Halal%20Screens.pdf",
-      rotate: "1.79deg",
-    },
-    {
-      title: "High-Beta Acceleration in Low-Debt Tech",
-      subtitle:
-        "An Exploratory Backtest of Upside Participation versus Downside Capture under AAOIFI Screens, 2020–2025",
-      image: "/papers/high-beta.png",
-      href: "https://github.com/regional-specter/Monterey-Finance/blob/main/Research/papers/05-high-beta/High-Beta%20Acceleration%20in%20Low-Debt%20Tech.pdf",
-      rotate: "-1.2deg",
-    },
-    {
-      title: "Post-Earnings Announcement Drift under AAOIFI Screens",
-      subtitle: "An Exploratory Backtest of Halal Earnings Surprise, 2020–2025",
-      image: "/papers/earnings-surprise.png",
-      href: "https://github.com/regional-specter/Monterey-Finance/blob/main/Research/papers/06-earn-momentum-sue/Post-Earnings%20Announcement%20Drift%20under%20AAOIFI%20Screens.pdf",
-      rotate: "0.9deg",
-    },
-  ],
+  papers: papers.map((paper) => ({
+    title: paper.title,
+    subtitle: paper.subtitle,
+    image: paper.image,
+    href: paper.href,
+    rotate: paper.rotate,
+    internal: paper.internal,
+  })),
 };
 
 export const modelsMethodology = {

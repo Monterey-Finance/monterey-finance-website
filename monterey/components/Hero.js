@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { site } from "@/lib/site";
 
 function ArrowUpRight() {
@@ -40,7 +41,7 @@ export default function Hero() {
 
       <header className="absolute inset-x-0 top-0 z-20">
         <div className="flex w-full items-center justify-between gap-3 px-4 pt-4 md:grid md:grid-cols-[auto_1fr_auto] md:px-[68px] md:pt-[40px]">
-          <a href="#top" className="relative z-10 shrink-0" aria-label={site.name}>
+          <Link href="/" className="relative z-10 shrink-0" aria-label={site.name}>
             <Image
               src={site.logo.src}
               alt={site.logo.alt}
@@ -49,16 +50,16 @@ export default function Hero() {
               className="hero-logo h-7 w-auto"
               priority
             />
-          </a>
+          </Link>
 
           <nav
             aria-label="Primary"
             className="hero-nav hidden items-center justify-center font-medium leading-[22px] tracking-[-0.05em] text-white md:flex"
           >
             {site.nav.map((item) => (
-              <a key={item.href} href={item.href} className="transition-opacity hover:opacity-80">
+              <Link key={item.href} href={item.href} className="transition-opacity hover:opacity-80">
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -67,6 +68,9 @@ export default function Hero() {
               <a
                 key={action.label}
                 href={action.href}
+                {...(action.href.startsWith("http")
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
                 className="hero-pill nav-pill inline-flex h-8 items-center justify-center gap-1.5 rounded-[14px] px-2.5 text-[11px] tracking-[-0.05em] text-white md:rounded-[17px]"
               >
                 {action.label}

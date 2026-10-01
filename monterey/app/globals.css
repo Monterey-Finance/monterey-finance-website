@@ -35,7 +35,7 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -52,7 +52,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   letter-spacing: var(--tracking-sans);
-  overflow-x: hidden;
+  overflow-x: clip;
   scrollbar-width: none;
 }
 
@@ -181,6 +181,139 @@ body {
   .nav-pill,
   .btn-glass:hover,
   .nav-pill:hover {
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Research lab — paper canvas, editorial type, quiet motion */
+.research-root {
+  --paper: #f6f3ee;
+  --ink: #1c1917;
+  --card: #f3efe6;
+  --card-border: #ddd6c8;
+  --grid: rgba(28, 25, 23, 0.09);
+  --modest: #8ab6e5;
+  --substantial: #9bb36b;
+  --extreme: #f3abc4;
+  --augmented: #c4b6e3;
+  --unchanged: #d5cfc3;
+  --fcf: #9bb36b;
+  --spus: #8ab6e5;
+  --spy: #c4bfb4;
+  --robust: #f3abc4;
+  --tile: #d5cfc3;
+  --kept: #9bb36b;
+  --out: #d5cfc3;
+  --tech: #f3abc4;
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-step: 600ms;
+  --font-research-serif: var(--font-serif), "Source Serif 4", Georgia, serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-research-serif);
+  letter-spacing: 0;
+  flex: 1;
+  min-height: 100%;
+}
+
+.research-root .font-sans,
+.research-root .research-ui {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  letter-spacing: -0.05em;
+}
+
+.paper-grid {
+  position: relative;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: -1px -1px;
+}
+
+.paper-grid::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.18'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+.research-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: var(--ink);
+  transform-origin: left;
+  z-index: 60;
+  pointer-events: none;
+}
+
+.research-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(20, 20, 19, 0.06);
+}
+
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-display);
+  font-size: 3.6em;
+  line-height: 0.78;
+  padding-right: 0.1em;
+  padding-top: 0.06em;
+  color: var(--ink);
+}
+
+.sketch-mark {
+  filter: url("#research-sketch");
+}
+
+.ghost-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 0.45em 0.95em;
+  background: transparent;
+  color: var(--ink);
+  transition:
+    transform var(--dur-step) var(--ease-soft),
+    background 0.3s ease;
+}
+
+.ghost-pill:hover {
+  background: rgba(20, 20, 19, 0.04);
+  transform: translateY(-2px);
+}
+
+.ink-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  border-radius: 999px;
+  padding: 0.45em 0.95em;
+  background: var(--ink);
+  color: var(--paper);
+  transition: transform var(--dur-step) var(--ease-soft);
+}
+
+.ink-pill:hover {
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ghost-pill,
+  .ink-pill,
+  .ghost-pill:hover,
+  .ink-pill:hover {
     transform: none;
     transition: none;
   }

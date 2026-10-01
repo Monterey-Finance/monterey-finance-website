@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { researchLab } from "@/lib/site";
 
@@ -15,14 +16,9 @@ export default function ResearchLab() {
       </div>
 
       <Reveal className="mx-auto mt-10 grid max-w-[1616px] grid-cols-1 gap-y-10 md:mx-0 md:mt-[149px] md:grid-cols-3 md:gap-x-[80px] md:gap-y-16">
-        {researchLab.papers.map((paper) => (
-          <article key={paper.title} className="flex flex-col items-center text-center">
-            <a
-              href={paper.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center text-center transition-opacity hover:opacity-80"
-            >
+        {researchLab.papers.map((paper) => {
+          const inner = (
+            <>
               <div
                 className="relative h-[240px] w-[186px] md:h-[434px] md:w-[335px]"
                 style={{ transform: `rotate(${paper.rotate})` }}
@@ -41,9 +37,28 @@ export default function ResearchLab() {
               <p className="mt-2 max-w-[280px] text-[13px] leading-[1.4] tracking-[-0.05em] text-white md:max-w-[389px] md:text-[20px] md:leading-[1.32]">
                 {paper.subtitle}
               </p>
-            </a>
-          </article>
-        ))}
+            </>
+          );
+
+          return (
+            <article key={paper.title} className="flex flex-col items-center text-center">
+              {paper.internal ? (
+                <Link href={paper.href} className="flex flex-col items-center text-center transition-opacity hover:opacity-80">
+                  {inner}
+                </Link>
+              ) : (
+                <a
+                  href={paper.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center text-center transition-opacity hover:opacity-80"
+                >
+                  {inner}
+                </a>
+              )}
+            </article>
+          );
+        })}
       </Reveal>
     </section>
   );

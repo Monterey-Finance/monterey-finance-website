@@ -1,4 +1,4 @@
-import { Geist, Instrument_Serif } from "next/font/google";
+import { Geist, Instrument_Serif, Source_Serif_4 } from "next/font/google";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -11,6 +11,11 @@ const displaySerif = Instrument_Serif({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-advercase",
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-serif",
 });
 
 export const metadata = {
@@ -57,7 +62,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${displaySerif.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${displaySerif.variable} ${sourceSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
