@@ -239,11 +239,9 @@ body {
 .paper-grid {
   position: relative;
   background-color: var(--paper);
-  background-image:
-    linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 32px 32px;
-  background-position: -1px -1px;
+  background-image: url("/research-paper-grid.svg?v=4");
+  background-size: 832px 832px;
+  background-position: 0 0;
 }
 
 .paper-grid::before {
@@ -251,9 +249,10 @@ body {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  opacity: 0.35;
+  opacity: 0.28;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.18'/%3E%3C/svg%3E");
   mix-blend-mode: multiply;
+  z-index: 0;
 }
 
 .research-progress {
