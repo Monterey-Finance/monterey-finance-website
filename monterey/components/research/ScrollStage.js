@@ -9,7 +9,7 @@ export function StepCard({ title, body, className = "" }) {
       <h3 className="research-ui text-[15px] font-bold tracking-[-0.05em] text-[color:var(--ink)]">
         {title}
       </h3>
-      <p className="mt-2 text-[16px] leading-[1.45] text-[color:var(--ink)]/85">{body}</p>
+      <p className="mt-2 text-[16px] leading-[1.35] text-[color:var(--ink)]/85">{body}</p>
     </article>
   );
 }

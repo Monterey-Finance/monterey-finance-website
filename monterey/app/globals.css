@@ -212,7 +212,8 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-research-serif);
-  letter-spacing: 0;
+  letter-spacing: -0.03em;
+  line-height: 1.4;
   flex: 1;
   min-height: 100%;
 }
@@ -220,7 +221,19 @@ body {
 .research-root .font-sans,
 .research-root .research-ui {
   font-family: var(--font-sans), system-ui, sans-serif;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.06em;
+}
+
+.research-root .font-display {
+  letter-spacing: -0.03em;
+}
+
+.research-root p,
+.research-root li,
+.research-root td,
+.research-root th {
+  letter-spacing: -0.03em;
+  line-height: 1.4;
 }
 
 .paper-grid {

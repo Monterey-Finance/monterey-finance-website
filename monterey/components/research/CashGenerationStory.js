@@ -38,7 +38,7 @@ function Arrow() {
 
 function Reading({ children }) {
   return (
-    <div className="mx-auto max-w-[640px] px-5 py-16 text-[19px] leading-[1.55] md:px-8 md:py-24 md:text-[21px]">
+    <div className="mx-auto max-w-[640px] px-5 py-16 text-[19px] leading-[1.42] md:px-8 md:py-24 md:text-[21px]">
       {children}
     </div>
   );
@@ -93,12 +93,12 @@ export default function CashGenerationStory() {
             <p className="research-ui text-[13px] uppercase tracking-[0.16em] text-[color:var(--ink)]/50">
               Paper 01 · {fcfPaper.version} · {fcfPaper.date}
             </p>
-            <h1 className="font-display mt-4 max-w-[18ch] text-[40px] leading-[1.05] tracking-[-0.01em] md:text-[64px]">
+            <h1 className="font-display mt-4 max-w-[18ch] text-[40px] leading-[1.02] tracking-[-0.03em] md:text-[64px]">
               {fcfPaper.question}
             </h1>
           </div>
           <div className="max-w-[420px] justify-self-end">
-            <p className="text-[18px] leading-[1.5] md:text-[20px]">
+            <p className="text-[18px] leading-[1.4] md:text-[20px]">
               After banned businesses and AAOIFI debt limits, keep names that turn a large share of sales into free cash flow. Own them in proportion to size. This page is a reading of that backtest — not a forecast, and not a live-return target.
             </p>
             <div className="research-ui mt-6 flex flex-wrap gap-3 text-[14px]">
@@ -154,7 +154,7 @@ export default function CashGenerationStory() {
               {ex.status === "kept" ? "Held" : "Not bought"}
             </p>
             <h3 className="research-ui mt-1 text-[22px] font-bold">{ex.ticker}</h3>
-            <p className="mt-2 text-[17px] leading-[1.45] text-[color:var(--ink)]/85">{ex.note}</p>
+            <p className="mt-2 text-[17px] leading-[1.35] text-[color:var(--ink)]/85">{ex.note}</p>
           </article>
         ))}
       </section>
@@ -250,7 +250,7 @@ export default function CashGenerationStory() {
 
       <section className="mx-auto max-w-[920px] px-5 py-12 md:px-8">
         <h2 className="font-display text-[32px] tracking-[-0.01em] md:text-[40px]">Levers</h2>
-        <p className="mt-3 max-w-[640px] text-[18px] leading-[1.5] text-[color:var(--ink)]/80">
+        <p className="mt-3 max-w-[640px] text-[18px] leading-[1.4] text-[color:var(--ink)]/80">
           The whole rule runs on a handful of named choices. Each row is marked data or assumption.
         </p>
         <div className="mt-8 overflow-x-auto">
@@ -283,14 +283,14 @@ export default function CashGenerationStory() {
         <h2 className="font-display text-[32px] tracking-[-0.01em] md:text-[40px]">
           What this does not capture
         </h2>
-        <ul className="mt-6 space-y-3 text-[18px] leading-[1.5]">
+        <ul className="mt-6 space-y-3 text-[18px] leading-[1.4]">
           {limits.map((item) => (
             <li key={item} className="pl-4" style={{ borderLeft: "2px solid var(--card-border)" }}>
               {item}
             </li>
           ))}
         </ul>
-        <p className="mt-8 text-[18px] leading-[1.5]">
+        <p className="mt-8 text-[18px] leading-[1.4]">
           A cap-weighted book of AAOIFI-screened S&P 500 names with FCF margins in the top half beat SPY and SPUS in 2023–2024. The product shape is coherent. It was not a construction bug. It is also a mega-cap technology book, the quintiles are noisy, and the live rule was chosen after a cheapness sort failed in the same sample. The idea is worth a second paper. It is not ready to promote to a live mandate.
         </p>
       </section>
@@ -301,7 +301,7 @@ export default function CashGenerationStory() {
           <p className="research-ui text-[13px] uppercase tracking-[0.14em] text-[color:var(--ink)]/45">
             {credits.version}
           </p>
-          <p className="mt-4 text-[17px] leading-[1.5]">
+          <p className="mt-4 text-[17px] leading-[1.4]">
             Model and writing: {credits.writing}. {credits.lab}.
           </p>
           <div className="research-ui mt-6 flex flex-wrap gap-3 text-[14px]">
@@ -329,12 +329,12 @@ function FindingBlock({ finding, children }) {
       <p className="research-ui text-[13px] font-medium text-[color:var(--ink)]/50">
         {finding.kicker}
       </p>
-      <h2 className="font-display mt-2 text-[30px] leading-[1.15] tracking-[-0.01em] md:text-[40px]">
+      <h2 className="font-display mt-2 text-[30px] leading-[1.08] tracking-[-0.03em] md:text-[40px]">
         {finding.claim}
       </h2>
       {children}
-      <p className="mt-6 text-[18px] leading-[1.5]">{finding.reading}</p>
-      <p className="mt-4 text-[16px] leading-[1.5] text-[color:var(--ink)]/65">{finding.caveat}</p>
+      <p className="mt-6 text-[18px] leading-[1.4]">{finding.reading}</p>
+      <p className="mt-4 text-[16px] leading-[1.4] text-[color:var(--ink)]/65">{finding.caveat}</p>
     </section>
   );
 }

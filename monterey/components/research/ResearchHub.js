@@ -39,7 +39,7 @@ export default function ResearchHub() {
           <h1 className="font-display mt-4 max-w-[16ch] text-[42px] leading-[1.05] tracking-[-0.01em] md:text-[68px]">
             Open research, written as a working notebook.
           </h1>
-          <p className="mt-6 max-w-[560px] text-[18px] leading-[1.5] md:text-[20px]">
+          <p className="mt-6 max-w-[560px] text-[18px] leading-[1.4] md:text-[20px]">
             Monterey Finance tests Halal equity rules on historical market data and publishes the notes. Steady growth is the mandate. Beating SPUS is interesting. It is not the point. No live capital is deployed here.
           </p>
           <div className="research-ui mt-7 flex flex-wrap gap-3 text-[14px]">
@@ -77,7 +77,7 @@ export default function ResearchHub() {
           <h2 className="font-display mt-3 max-w-[22ch] text-[32px] leading-[1.12] tracking-[-0.01em] md:text-[44px]">
             {featured.title}
           </h2>
-          <p className="mt-3 max-w-[540px] text-[18px] leading-[1.5] text-[color:var(--ink)]/80">
+          <p className="mt-3 max-w-[540px] text-[18px] leading-[1.4] text-[color:var(--ink)]/80">
             {featured.subtitle}. After AAOIFI debt limits, a cap-weighted slice of high FCF-margin names returned 42.4% a year in 2023–2024, versus 31.1% for SPUS. The book is Halal mega-cap quality and technology. The sample is short. The rule was rewritten in-sample.
           </p>
           <div className="research-ui mt-6 flex flex-wrap gap-3 text-[14px]">
@@ -94,7 +94,7 @@ export default function ResearchHub() {
 
       <section className="mx-auto max-w-[1240px] px-5 py-16 md:px-10">
         <h2 className="font-display text-[28px] tracking-[-0.01em] md:text-[36px]">More notes</h2>
-        <p className="mt-3 max-w-[640px] text-[17px] leading-[1.5] text-[color:var(--ink)]/75">
+        <p className="mt-3 max-w-[640px] text-[17px] leading-[1.4] text-[color:var(--ink)]/75">
           Papers 02–06 are still read as PDFs in the lab folder. Each one is an exploratory backtest, not a finished proof.
         </p>
         <ul className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
@@ -121,7 +121,7 @@ export default function ResearchHub() {
                 <h3 className="font-display mt-6 max-w-[240px] text-[20px] leading-snug tracking-[-0.01em]">
                   {paper.title}
                 </h3>
-                <p className="mt-2 max-w-[240px] text-[14px] leading-[1.4] text-[color:var(--ink)]/65">
+                <p className="mt-2 max-w-[240px] text-[14px] leading-[1.32] text-[color:var(--ink)]/65">
                   {paper.subtitle}
                 </p>
               </a>
@@ -134,7 +134,7 @@ export default function ResearchHub() {
         <h2 className="font-display text-[28px] tracking-[-0.01em] md:text-[36px]">
           What the lab is optimizing for
         </h2>
-        <ul className="mt-6 space-y-4 text-[18px] leading-[1.5]">
+        <ul className="mt-6 space-y-4 text-[18px] leading-[1.4]">
           <li>
             <span className="font-semibold">Steady growth.</span> Compound over time with drawdowns we can live with.
           </li>
